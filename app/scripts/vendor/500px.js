@@ -19,8 +19,6 @@
       original_method,
       random_method_name,
       handle_api_callback,
-      encode_param_name,
-      object_to_params,
       fire_event,
       login_callback;
 
