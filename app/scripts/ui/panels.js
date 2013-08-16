@@ -2,7 +2,7 @@ define([
        "flight/component",
        "jquery",
        "lodash",
-       "text!/templates/panel.html"
+       "text!templates/panel.html"
 ], function ( defineComponent, $, _, panelTemplate  ) {
 	// wee joke
 	"use strict"
