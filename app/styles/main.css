@@ -109,6 +109,11 @@ object {
 .front {
 	position: relative;
 	text-align: center;
+	transition: opacity 2s;
+}
+
+.front.hide {
+	opacity: 0!important;
 }
 
 .front h1 {
@@ -130,10 +135,10 @@ object {
 }
 
 .front .cta {
-	margin-top: 10%;
+	margin-top: 5%;
 	border-radius: 100%;
 	border: 5px solid #ccc;
-	border-color: rgba( 180, 180, 180, 0.5 )
+	border-color: rgba( 180, 180, 180, 0.7 );
 	box-shadow: none;
 	background-color: #b10;
 	background: radial-gradient( circle, #e13, #b10 );
@@ -147,7 +152,7 @@ object {
 	font-size: 3em;
 	line-height: 1em;
 	margin-bottom: 5%;
-	transition: all .1s;
+	transition: all .2s;
 }
 
 .front .cta:hover,
@@ -166,7 +171,7 @@ object {
 	border-color: #222;
 	background: #400;
 	color: #ccc;
-	font-size: 3.15em;
+	font-size: 3.25em;
 }
 
 .front .next,
@@ -181,7 +186,7 @@ object {
 }
 
 .next p {
-		text-shadow: 1px 1px 1px black;
+	text-shadow: 1px 1px 1px black;
 }
 
 .next .cta {

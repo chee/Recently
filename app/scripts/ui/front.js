@@ -21,11 +21,11 @@ define([
 
 		this.comeBack = function ( event, data ) {
 			fly.on( document, "uiUserWantsToStart", this.fadeAway );
-			$( ".front" ).addClass( "next" ).fadeIn( 2000 );
+			$( ".front" ).addClass( "next" ).removeClass( "hide" );
 		}
 
 		this.fadeAway = function ( event, data ) {
-			$( ".front" ).fadeOut( 2000 );
+			$( ".front" ).addClass( "hide" );
 		}
 	}
 })
