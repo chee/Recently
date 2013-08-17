@@ -18,7 +18,7 @@ define([
 
 	function soundCloudGet ( fly, data ) {
 		soundManager.setup({
-			url: "bower_components/soundmanager/swf/",
+			url: "swf/",
 			preferFlash: false,
 			debugMode: false
 		});
