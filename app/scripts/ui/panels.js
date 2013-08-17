@@ -4,8 +4,7 @@ define([
        "lodash",
        "text!templates/panel.html"
 ], function ( defineComponent, $, _, panelTemplate  ) {
-	// wee joke
-	"use strict"
+	"use strict";
 
 	return defineComponent( panels );
 
@@ -28,7 +27,7 @@ define([
 				target.replaceWith( panel )
 				target.children().fadeIn( 2400 )
 			} else {
-				panel.css( "display: none" );
+				panel.css( "display", "none" );
 				$( "body" ).append( panel );
 				panel.fadeIn( 1000 );
 			}
