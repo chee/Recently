@@ -1,7 +1,8 @@
 define([
        "flight/component",
        "jquery",
-       "scripts/util"
+       "scripts/util",
+       "soundmanager"
 ], function ( defineComponent, $ ) {
 	return defineComponent( sound )
 
@@ -16,7 +17,11 @@ define([
 	}
 
 	function soundCloudGet ( fly, data ) {
-		var audio = $( "<audio>" );
+		soundManager.setup({
+			url: "bower_components/soundmanager/swf/",
+			preferFlash: false,
+			debugMode: false
+		});
 		var request = {
 			// I have no idea why, but the api seems to return
 			// the same track every time unless I ask >1.
@@ -43,14 +48,21 @@ define([
 				type: 'sound',
 				userImage: track.user.avatar_url
 			}
+
+			fly.trigger( document, "dataSoundInfo", sanitised );
 			
-			// load the audio up a bit before announcing i've got it
-			audio.attr( "src", sanitised.pieceLinkRaw )
-//			.append( "body" )
-			.on( "canplay", function () {
-				sanitised.element = audio.clone();
-				fly.trigger( document, "dataSound", sanitised );
+			soundManager.onready(function () {
+				sanitised.sound = soundManager.createSound({
+					url: sanitised.pieceLinkRaw,
+					autoLoad: true,
+					autoPlay: false,
+					onload: function () {
+						fly.trigger( document, "dataSound", sanitised );
+					},
+					onfinish: function () {
+						fly.trigger( document, "dataSoundOver", sanitised );
+					}
+				});
 			});
 		});
-	}
-});
+}});
