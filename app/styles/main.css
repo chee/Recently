@@ -195,6 +195,9 @@ object {
 
 .next .cta:active {
 	background: #036;
+	border-color: #bbaa99;
+	text-shadow: 1px 1px 0 #90180a;
+	box-shadow: inset 1px 1px 2px #90180a, 2px 2px 5px black;
 }
 
 /* YEAHHHHH */

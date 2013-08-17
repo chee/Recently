@@ -17,7 +17,6 @@ define([
 		}
 
 		this.comeBack = function ( event, data ) {
-			
 			$( ".front" ).addClass( "next" ).fadeIn( 2000 );
 		}
 
