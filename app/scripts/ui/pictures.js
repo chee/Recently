@@ -1,9 +1,7 @@
 define([
        "flight/component",
-       "jquery",
-       "lodash",
-       "text!templates/slide.html"
-], function ( defineComponent, $, _, slideTemplate ) {
+       "text!templates/slide.html",
+], function ( defineComponent, slideTemplate ) {
 	"use strict";
 	return defineComponent( slide );
 

@@ -24,6 +24,15 @@ require.config({
 		app: {
 			deps: [ "bower_components/flight/lib/index" ]
 		},
+		"scripts/ui/pictures": {
+			deps: [ "lodash", "jquery" ]
+		},
+		"scripts/ui/panels": {
+			deps: [ "lodash", "jquery" ]
+		},
+		"scripts/ui/front": {
+			deps: [ "lodash", "jquery" ]
+		}
 	}
 
 });

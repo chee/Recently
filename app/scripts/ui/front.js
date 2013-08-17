@@ -1,8 +1,6 @@
 define([
        "flight/component",
-       "jquery",
-       "lodash"
-], function ( defineComponent, $, _ ) {
+], function ( defineComponent ) {
 	"use strict";
 	return defineComponent( front );
 
