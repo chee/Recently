@@ -7,7 +7,7 @@ define([
 
 	function slide () {
 		var body = $( "body" );
-		var sfw, delay, playing, first;
+		var sfw, delay, playing, first, timeout;
 		
 		this.after( "initialize", function () {
 			this.on( document, "dataPicture", this.picture );
@@ -18,7 +18,8 @@ define([
 
 		this.getStarted = function ( event, data ) {
 			// filth mode
-			sfw = !event.shiftKey;
+			//sfw = data.swf;
+			sfw = true;
 		}
 
 		this.picture = function ( event, data ) {
@@ -37,7 +38,7 @@ define([
 			}
 
 			if ( playing ) {
-				setTimeout(function () {
+				timeout = setTimeout(function () {
 					fly.trigger( document, "uiNeedsPicture", { sfw: sfw } );
 				}, delay);
 			}
@@ -58,6 +59,7 @@ define([
 
 		this.soundOver = function () {
 			playing = false;
+			window.clearTimeout( timeout );
 		}
 	}
 })
