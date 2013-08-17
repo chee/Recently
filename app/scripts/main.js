@@ -24,9 +24,6 @@ require.config({
 		app: {
 			deps: [ "bower_components/flight/lib/index" ]
 		},
-		mediaelement: {
-			deps: [ "jquery" ]
-		}
 	}
 
 });
