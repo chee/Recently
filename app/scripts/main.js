@@ -7,8 +7,9 @@ require.config({
 		es5shim: "bower_components/es5-shim/es5-shim",
 		lodash: "bower_components/lodash/lodash",
 		text: "bower_components/requirejs-text/text",
-//		soundmanager: "bower_components/soundmanager/soundmanager2",
+		soundmanager: "bower_components/soundmanager/script/soundmanager2",
 		app: "scripts/app",
+		flight: "bower_components/flight/lib/index"
 	},
 	map: {
 		"*": {
@@ -17,12 +18,15 @@ require.config({
 		
 	},
 	shim: {
-		"bower_components/flight/lib/index": {
+		flight: {
 			deps: [ "jquery", "es5shim" ]
 		},
 		app: {
 			deps: [ "bower_components/flight/lib/index" ]
 		},
+		mediaelement: {
+			deps: [ "jquery" ]
+		}
 	}
 
 });
