@@ -98,6 +98,7 @@ body a {
 	height: 100%;
 	width: 100%;
 	background-size: cover;
+	background-position: 50% 0;
 }
 
 object {
@@ -131,20 +132,22 @@ object {
 .front .cta {
 	margin-top: 10%;
 	border-radius: 100%;
-	border: 5px solid #eee;
+	border: 5px solid #ccc;
+	border-color: rgba( 180, 180, 180, 0.5 )
 	box-shadow: none;
 	background-color: #b10;
 	background: radial-gradient( circle, #e13, #b10 );
-	color: white;
+	color: #ccc;
+	color: rgba( 250, 250, 250, 0.8 );
 	text-shadow: 2px 2px 2px rgba( 0, 0, 0, 0.2 );
 	font-family: helvetica neue, roboto;
 	font-weight: 100;
-	width: 6em;
-	height: 4em;
-	font-size: 4em;
+	width: 5.3em;
+	height: 5em;
+	font-size: 3em;
 	line-height: 1em;
-	color: #eee;
 	margin-bottom: 5%;
+	transition: all .1s;
 }
 
 .front .cta:hover,
@@ -153,17 +156,45 @@ object {
 	outline: none;
 	background-color: #b10;
 	background-image: radial-gradient( circle, #e13, #b10 );
-	border-color: #bbaa99;
+	border-color: #eee;
 	text-shadow: 1px 1px 0 #90180a;
-	box-shadow: inset 1px 1px 2px #90180a, 2px 2px 5px black;
+	box-shadow: 0 0 .5em black;
+	font-size: 3.2em;
 }
 
 .front .cta:active {
-	border-color: #aaa;
-	box-shadow: none;	
-	background: #b10;
-	box-shadow: inset 0 0 5px black;
+	border-color: #222;
+	background: #400;
 	color: #ccc;
+	font-size: 3.15em;
+}
+
+.front .next,
+.next .cta,
+.next p {
+	display: none;
+}
+
+.next .next {
+	display: block;
+	margin: 1em auto;
+}
+
+.next p {
+		text-shadow: 1px 1px 1px black;
+}
+
+.next .cta {
+	background: radial-gradient( circle, #138, #016 );
+}
+
+.next .cta:hover,
+.next .cta:focus {
+	background: radial-gradient( circle, #13c, #019 );
+}
+
+.next .cta:active {
+	background: #036;
 }
 
 /* YEAHHHHH */
