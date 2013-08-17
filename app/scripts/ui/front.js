@@ -1,13 +1,16 @@
 define([
        "flight/component",
-       "jquery"
-], function ( defineComponent, $ ) {
+       "jquery",
+       "lodash"
+], function ( defineComponent, $, _ ) {
 	"use strict";
 	return defineComponent( front );
 
 	function front () {
+		var fly = this;
 		this.after( "initialize", function () {
-			this.on( "button.cta", "click", this.getStarted );
+			// included this debounce so it doesn't try and load 1000 things
+			this.on( "button.cta", "click", _.debounce( this.getStarted, 4500, true ) );
 			this.on( document, "uiUserWantsToStart", this.fadeAway );
 			this.on( document, "dataSoundOver", this.comeBack );
 		});
@@ -17,6 +20,7 @@ define([
 		}
 
 		this.comeBack = function ( event, data ) {
+			fly.on( document, "uiUserWantsToStart", this.fadeAway );
 			$( ".front" ).addClass( "next" ).fadeIn( 2000 );
 		}
 
