@@ -23,11 +23,7 @@ define([
 			created_at: now()
 		};
 
-<<<<<<< HEAD
 		data && data.sfw ? request.exclude = "Nude" : request.only = "Nude", request.rpp = 47;
-=======
-		if ( data && data.sfw ) request.exclude = "Nude";
->>>>>>> 1fc84348f1d46465e0231cb979754535cd2f5f6e
 
 		_500px.api( "/photos", request, function ( result ) {
 			var photos = result.data.photos;
