@@ -11,8 +11,7 @@
     "lodash": "~1.3.1",
     "requirejs-text": "~2.0.10",
     "soundcloud": "~0.1.0",
-    "armory-blrrtstrap-soundmanager2": "*",
-    "soundmanager": "*"
+    "mediaelement": "~2.13.1"
   },
   "devDependencies": {}
 }
