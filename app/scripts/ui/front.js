@@ -13,12 +13,12 @@ define([
 		});
 
 		this.getStarted = function ( event, data ) {
-			this.trigger( document, "uiUserWantsToStart" );
+			this.trigger( document, "uiUserWantsToStart", { sfw: !event.shiftKey } );
 		}
 
 		this.comeBack = function ( event, data ) {
-			console.log("wat");
-			$( ".front" ).fadeIn( 2000 );
+			
+			$( ".front" ).addClass( "next" ).fadeIn( 2000 );
 		}
 
 		this.fadeAway = function ( event, data ) {
