@@ -18,8 +18,7 @@ define([
 
 		this.getStarted = function ( event, data ) {
 			// filth mode
-			//sfw = data.swf;
-			sfw = true;
+			sfw = data.sfw;
 		}
 
 		this.picture = function ( event, data ) {
@@ -39,7 +38,9 @@ define([
 
 			if ( playing ) {
 				timeout = setTimeout(function () {
-					fly.trigger( document, "uiNeedsPicture", { sfw: sfw } );
+					fly.trigger( document, "uiNeedsPicture", {
+						sfw: sfw
+					});
 				}, delay);
 			}
 		}
