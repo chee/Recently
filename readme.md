@@ -1,1 +1,1 @@
-Any further development on Recently will happen on https://git.snoot.club/chee/Recently
+Any further development on readme.md will happen on https://git.snoot.club/chee/readme.md
